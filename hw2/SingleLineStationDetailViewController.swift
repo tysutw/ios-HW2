@@ -22,6 +22,10 @@ class SingleLineStationDetailViewController: UIViewController {
         super.viewWillAppear(animated)
         self.updateValues()
     }
+    
+    override func viewDidLoad() {
+        self.navigationItem.title = station?.name
+    }
 
     func updateValues() {
         guard self.isViewLoaded() else {

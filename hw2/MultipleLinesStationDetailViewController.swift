@@ -24,6 +24,10 @@ class MultipleLinesStationDetailViewController: UIViewController {
         self.updateValues()
     }
     
+    override func viewDidLoad() {
+        self.navigationItem.title = station?.name
+    }
+    
     func updateValues() {
         guard self.isViewLoaded() else {
             return
